@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 before 'bundler:install', 'bundler:gem_install'
+after 'bundler:install', 'bundler:clean'
 
 namespace :bundler do
   desc 'Install correct version of bundler based on Gemfile.lock'
@@ -12,6 +13,15 @@ namespace :bundler do
         if (bundled_with = capture_bundled_with)
           execute "#{install_command} -v #{bundled_with}"
         end
+      end
+    end
+  end
+
+  desc 'Clean old versions of gems'
+  task :clean do
+    on fetch(:bundle_servers) do
+      within release_path do
+        execute :bundle, :clean, '--force'
       end
     end
   end
