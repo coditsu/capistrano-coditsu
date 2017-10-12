@@ -12,10 +12,10 @@ module Capistrano
     # Names of files that store capistrano procedures
     CAP_FILES = %w[bundler].freeze
 
-    # Deploy hooks registration
-    # def register_hooks
-    #   before 'bundler:install', 'bundler:gem_install'
-    # end
+    # Default values for Karafka settings
+    def set_defaults
+      set :bundle_clean_options, '--force'
+    end
   end
 end
 

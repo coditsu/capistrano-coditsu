@@ -17,15 +17,6 @@ namespace :bundler do
     end
   end
 
-  desc 'Clean old versions of gems'
-  task :clean do
-    on fetch(:bundle_servers) do
-      within release_path do
-        execute :bundle, :clean, '--force'
-      end
-    end
-  end
-
   def capture_bundled_with
     lockfile = fetch(:bundler_lockfile, 'Gemfile.lock')
     return unless test "[ -f #{release_path.join(lockfile)} ]"
