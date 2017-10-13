@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://coditsu.io'
   spec.summary     = 'Coditsu integration for Capistrano'
   spec.description = 'Coditsu integration for Capistrano'
-  spec.license     = 'MIT'
+  spec.license      = 'Trade secret'
 
   spec.add_dependency 'capistrano', '>= 3.9'
   spec.add_dependency 'capistrano-bundler'
