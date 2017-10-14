@@ -19,6 +19,8 @@ module Capistrano
   end
 end
 
+# rubocop:disable Security/Eval
 Capistrano::Coditsu::CAP_FILES.each do |cap_file|
   eval File.open(File.expand_path("../tasks/#{cap_file}.cap", __FILE__), 'r').read
 end
+# rubocop:enable Security/Eval
