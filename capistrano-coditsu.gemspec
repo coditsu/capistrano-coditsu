@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Coditsu integration for Capistrano'
   spec.license     = 'Trade secret'
 
+  spec.add_dependency 'bcrypt_pbkdf'
   spec.add_dependency 'capistrano', '>= 3.9'
   spec.add_dependency 'capistrano-bundler'
   spec.add_dependency 'capistrano-karafka'
@@ -21,6 +22,9 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'capistrano-rails'
   spec.add_dependency 'capistrano-sidekiq'
   spec.add_dependency 'capistrano3-puma'
+  # 5.0.0 does not work with our ssh keys for some reason
+  spec.add_dependency 'rbnacl', '4.0.2'
+  spec.add_dependency 'rbnacl-libsodium'
   spec.required_ruby_version = '>= 2.4.0'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec)/}) }
