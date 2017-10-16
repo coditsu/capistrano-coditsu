@@ -41,3 +41,9 @@ We are including `capistrano-karafka` but you need to require it in your applica
 
 [How to do it](https://github.com/karafka/capistrano-karafka#usage)
 
+## capistrano-sidekiq
+
+We are including `capistrano-sidekiq` but you need to require it in your application on your own.
+
+[How to do it](https://github.com/seuros/capistrano-sidekiq#usage)
+

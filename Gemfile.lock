@@ -7,6 +7,7 @@ PATH
       capistrano-karafka
       capistrano-rails
       capistrano-rvm
+      capistrano-sidekiq
 
 GEM
   remote: https://rubygems.org/
@@ -36,6 +37,9 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-sidekiq (0.20.0)
+      capistrano (>= 3.9.0)
+      sidekiq (>= 3.4)
     celluloid (0.17.3)
       celluloid-essentials
       celluloid-extras
@@ -106,9 +110,18 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
     null-logger (0.1.4)
+    rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
     rake (12.1.0)
+    redis (4.0.1)
     require_all (1.4.0)
     ruby-kafka (0.4.2)
+    sidekiq (5.0.5)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.4, < 5)
     sshkit (1.14.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
