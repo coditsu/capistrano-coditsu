@@ -2,7 +2,6 @@
 
 require 'capistrano/bundler'
 require 'capistrano/rvm'
-require 'capistrano/rails'
 require 'capistrano/plugin'
 
 # Capistrano stuff

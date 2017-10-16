@@ -25,5 +25,10 @@ In your **Capfile**
 
 ```ruby
 require 'capistrano/coditsu'
+
 install_plugin Capistrano::Coditsu
 ```
+
+## capistrano-rails
+
+We are including `capistrano-rails` but you need to require it in your application on your own.
