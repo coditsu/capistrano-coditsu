@@ -32,3 +32,12 @@ install_plugin Capistrano::Coditsu
 ## capistrano-rails
 
 We are including `capistrano-rails` but you need to require it in your application on your own.
+
+[How to do it](https://github.com/capistrano/rails#usage)
+
+## capistrano-karafka
+
+We are including `capistrano-karafka` but you need to require it in your application on your own.
+
+[How to do it](https://github.com/karafka/capistrano-karafka#usage)
+

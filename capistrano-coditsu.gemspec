@@ -16,6 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'capistrano', '>= 3.9'
   spec.add_dependency 'capistrano-bundler'
+  spec.add_dependency 'capistrano-karafka'
   spec.add_dependency 'capistrano-rvm'
   spec.add_dependency 'capistrano-rails'
   spec.required_ruby_version = '>= 2.4.0'
