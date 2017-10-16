@@ -4,12 +4,20 @@ PATH
     capistrano-coditsu (0.1.0)
       capistrano (>= 3.9)
       capistrano-bundler
+      capistrano-karafka
       capistrano-rails
       capistrano-rvm
+      capistrano-sidekiq
+      capistrano3-puma
 
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (5.1.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
     airbrussh (1.3.0)
       sshkit (>= 1.6.1, != 1.7.0)
     capistrano (3.9.1)
@@ -20,20 +28,122 @@ GEM
     capistrano-bundler (1.3.0)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-karafka (1.1.1)
+      capistrano (>= 3.9)
+      capistrano-bundler
+      karafka (>= 0.5)
     capistrano-rails (1.3.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    i18n (0.8.6)
+    capistrano-sidekiq (0.20.0)
+      capistrano (>= 3.9.0)
+      sidekiq (>= 3.4)
+    capistrano3-puma (3.1.1)
+      capistrano (~> 3.7)
+      capistrano-bundler
+      puma (~> 3.4)
+    celluloid (0.17.3)
+      celluloid-essentials
+      celluloid-extras
+      celluloid-fsm
+      celluloid-pool
+      celluloid-supervision
+      timers (>= 4.1.1)
+    celluloid-essentials (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-extras (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-fsm (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-pool (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-supervision (0.20.6)
+      timers (>= 4.1.1)
+    concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
+    dry-configurable (0.7.0)
+      concurrent-ruby (~> 1.0)
+    dry-container (0.6.0)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+    dry-core (0.3.4)
+      concurrent-ruby (~> 1.0)
+    dry-equalizer (0.2.0)
+    dry-logic (0.4.2)
+      dry-container (~> 0.2, >= 0.2.6)
+      dry-core (~> 0.2)
+      dry-equalizer (~> 0.2)
+    dry-types (0.12.1)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1)
+      dry-container (~> 0.3)
+      dry-core (~> 0.2, >= 0.2.1)
+      dry-equalizer (~> 0.2)
+      dry-logic (~> 0.4, >= 0.4.2)
+      inflecto (~> 0.0.0, >= 0.0.2)
+    dry-validation (0.11.1)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+      dry-core (~> 0.2, >= 0.2.1)
+      dry-equalizer (~> 0.2)
+      dry-logic (~> 0.4, >= 0.4.0)
+      dry-types (~> 0.12.0)
+    envlogic (1.0.4)
+      activesupport
+    hitimes (1.2.6)
+    i18n (0.9.0)
+      concurrent-ruby (~> 1.0)
+    inflecto (0.0.2)
+    karafka (1.0.0)
+      activesupport (>= 5.0)
+      celluloid
+      dry-configurable (~> 0.7)
+      dry-validation (~> 0.11)
+      envlogic (~> 1.0)
+      multi_json (>= 1.12)
+      rake (>= 11.3)
+      require_all (>= 1.4)
+      ruby-kafka (>= 0.4)
+      thor (~> 0.19)
+      waterdrop (>= 0.4)
+    minitest (5.10.3)
+    multi_json (1.12.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
+    null-logger (0.1.4)
+    puma (3.10.0)
+    rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
     rake (12.1.0)
+    redis (4.0.1)
+    require_all (1.4.0)
+    ruby-kafka (0.4.2)
+    sidekiq (5.0.5)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.4, < 5)
     sshkit (1.14.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    thor (0.20.0)
+    thread_safe (0.3.6)
+    timers (4.1.2)
+      hitimes
+    tzinfo (1.2.3)
+      thread_safe (~> 0.1)
+    waterdrop (0.4.0)
+      bundler
+      connection_pool
+      dry-configurable (~> 0.6)
+      null-logger
+      rake
+      ruby-kafka (~> 0.4)
 
 PLATFORMS
   ruby
