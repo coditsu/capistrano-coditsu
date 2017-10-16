@@ -8,6 +8,7 @@ PATH
       capistrano-rails
       capistrano-rvm
       capistrano-sidekiq
+      capistrano3-puma
 
 GEM
   remote: https://rubygems.org/
@@ -40,6 +41,10 @@ GEM
     capistrano-sidekiq (0.20.0)
       capistrano (>= 3.9.0)
       sidekiq (>= 3.4)
+    capistrano3-puma (3.1.1)
+      capistrano (~> 3.7)
+      capistrano-bundler
+      puma (~> 3.4)
     celluloid (0.17.3)
       celluloid-essentials
       celluloid-extras
@@ -110,6 +115,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
     null-logger (0.1.4)
+    puma (3.10.0)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
