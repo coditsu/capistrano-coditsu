@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 before 'bundler:install', 'bundler:gem_install'
-after 'bundler:install', 'bundler:clean'
 
 namespace :bundler do
   desc 'Install correct version of bundler based on Gemfile.lock'
