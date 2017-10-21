@@ -131,7 +131,7 @@ GEM
       rbnacl (>= 3.0.1)
     redis (4.0.1)
     require_all (1.4.0)
-    ruby-kafka (0.4.2)
+    ruby-kafka (0.4.3)
     sidekiq (5.0.5)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
