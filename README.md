@@ -52,4 +52,3 @@ We are including `capistrano-sidekiq` but you need to require it in your applica
 We are including `capistrano3-puma` but you need to require it in your application on your own.
 
 [How to do it](https://github.com/seuros/capistrano-puma#usage)
-

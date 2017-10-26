@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'capistrano', '>= 3.9'
   spec.add_dependency 'capistrano-bundler'
   spec.add_dependency 'capistrano-karafka'
-  spec.add_dependency 'capistrano-rvm'
   spec.add_dependency 'capistrano-rails'
+  spec.add_dependency 'capistrano-rvm'
   spec.add_dependency 'capistrano-sidekiq'
   spec.add_dependency 'capistrano3-puma'
   # 5.0.0 does not work with our ssh keys for some reason
