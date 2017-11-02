@@ -1,6 +1,5 @@
 # Capistrano Coditsu
 
-
 Coditsu integration for Capistrano.
 
 ## Installation
