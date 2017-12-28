@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   # 5.0.0 does not work with our ssh keys for some reason
   spec.add_dependency 'rbnacl', '4.0.2'
   spec.add_dependency 'rbnacl-libsodium'
-  spec.required_ruby_version = '>= 2.4.0'
+  spec.required_ruby_version = '>= 2.5.0'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec)/}) }
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
