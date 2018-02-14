@@ -84,7 +84,7 @@ GEM
     envlogic (1.0.4)
       activesupport
     ffi (1.9.21)
-    i18n (0.9.4)
+    i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     inflecto (0.0.2)
     karafka (1.1.2)
