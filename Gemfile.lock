@@ -107,7 +107,7 @@ GEM
     null-logger (0.1.4)
     puma (3.11.2)
     rack (2.0.4)
-    rack-protection (2.0.0)
+    rack-protection (2.0.1)
       rack
     rake (12.3.0)
     rbnacl (4.0.2)
