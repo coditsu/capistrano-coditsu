@@ -114,7 +114,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
     null-logger (0.1.4)
-    puma (3.11.2)
+    puma (3.11.3)
     rack (2.0.4)
     rack-protection (2.0.1)
       rack
