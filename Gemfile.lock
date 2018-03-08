@@ -124,7 +124,7 @@ GEM
     rbnacl-libsodium (1.0.16)
       rbnacl (>= 3.0.1)
     redis (4.0.1)
-    require_all (1.5.0)
+    require_all (2.0.0)
     rouge (2.2.1)
     ruby-kafka (0.5.3)
     sidekiq (5.1.1)
