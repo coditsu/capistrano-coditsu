@@ -22,8 +22,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'capistrano-rvm'
   spec.add_dependency 'capistrano-sidekiq'
   spec.add_dependency 'capistrano3-puma'
-  spec.add_dependency 'net-ssh', '5.0.0.beta2'
   spec.add_dependency 'ed25519'
+  spec.add_dependency 'net-ssh', '5.0.0.beta2'
   spec.required_ruby_version = '>= 2.5.0'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec)/}) }
