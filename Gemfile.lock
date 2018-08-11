@@ -124,7 +124,7 @@ GEM
     require_all (2.0.0)
     rouge (2.2.1)
     ruby-kafka (0.6.8)
-    sidekiq (5.2.0)
+    sidekiq (5.2.1)
       connection_pool (~> 2.2, >= 2.2.2)
       rack-protection (>= 1.5.0)
       redis (>= 3.3.5, < 5)
