@@ -2,6 +2,7 @@
 
 require 'capistrano/bundler'
 require 'capistrano/plugin'
+require 'capistrano/rbenv'
 
 # Capistrano stuff
 module Capistrano
