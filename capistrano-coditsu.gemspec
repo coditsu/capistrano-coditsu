@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name        = 'capistrano-coditsu'
-  spec.version     = '0.1.0'
+  spec.version     = '0.1.1'
   spec.platform    = Gem::Platform::RUBY
   spec.authors     = ['Tomasz Pajor']
   spec.email       = %w[tomek@coditsu.io]
@@ -19,7 +19,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'capistrano-bundler'
   spec.add_dependency 'capistrano-karafka'
   spec.add_dependency 'capistrano-rails'
-  spec.add_dependency 'capistrano-rvm'
   spec.add_dependency 'capistrano-sidekiq'
   spec.add_dependency 'capistrano3-puma'
   spec.add_dependency 'ed25519'

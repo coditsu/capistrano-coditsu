@@ -6,8 +6,7 @@ namespace :bundler do
   desc 'Install correct version of bundler based on Gemfile.lock'
   task :gem_install do
     on fetch(:bundle_servers) do
-      rvm_command = "#{fetch(:rvm_path)}/bin/rvm #{fetch(:rvm_ruby_version)} do"
-      install_command = "#{rvm_command} gem install bundler"
+      install_command = "gem install bundler"
       within release_path do
         if (bundled_with = capture_bundled_with)
           execute "#{install_command} -v #{bundled_with}"

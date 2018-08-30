@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'capistrano/bundler'
-require 'capistrano/rvm'
 require 'capistrano/plugin'
 
 # Capistrano stuff
