@@ -1,0 +1,56 @@
+# frozen_string_literal: true
+
+before 'deploy:check', 'deploy:create_directories'
+before 'deploy:check', 'deploy:upload_shared_config_files'
+
+namespace :deploy do
+  task :create_directories do
+    on roles(:all) do
+      (fetch(:created_dirs) || []).each do |directory|
+        execute "mkdir -p #{File.join(shared_path, directory)}"
+      end
+    end
+  end
+
+  desc 'Updates shared/config/*.yml files with the proper ones for environment'
+  task :upload_shared_config_files do
+    config_files = {}
+    stage_settings_dir = fetch(:settings_path)
+
+    run_locally do
+      Dir.glob(
+        File.join(stage_settings_dir, '**/*'),
+        File::FNM_DOTMATCH
+      ).each do |file_name|
+        next if File.directory?(file_name)
+        cksum = capture 'cksum', File.join(file_name)
+        config_files[file_name] = cksum
+      end
+    end
+
+    on roles(:all) do
+      config_path = File.join shared_path
+
+      config_files.each do |file_name, local_cksum|
+        remote_file_name = "#{config_path}/#{file_name.gsub(stage_settings_dir, '')}"
+        execute "mkdir -p #{File.dirname(remote_file_name)}"
+
+        lsum, lsize, lpath = local_cksum.split
+
+        if test("[ -f #{remote_file_name} ]")
+          remote_cksum = capture "cksum", remote_file_name
+          rsum, rsize, rpath = remote_cksum.split
+
+          if lsum != rsum
+            execute 'mkdir -p ' + File.dirname(remote_file_name)
+            upload! lpath, remote_file_name
+            info "Replaced #{file_name} -> #{remote_file_name}"
+          end
+        else
+          upload! lpath, remote_file_name
+          info "Upload new #{file_name} -> #{remote_file_name}"
+        end
+      end
+    end
+  end
+end
