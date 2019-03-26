@@ -31,25 +31,25 @@ require 'capistrano/coditsu'
 install_plugin Capistrano::Coditsu
 ```
 
-## capistrano-rails
+### capistrano-rails
 
 We are including `capistrano-rails` but you need to require it in your application on your own.
 
 [How to do it](https://github.com/capistrano/rails#usage)
 
-## capistrano-karafka
+### capistrano-karafka
 
 We are including `capistrano-karafka` but you need to require it in your application on your own.
 
 [How to do it](https://github.com/karafka/capistrano-karafka#usage)
 
-## capistrano-sidekiq
+### capistrano-sidekiq
 
 We are including `capistrano-sidekiq` but you need to require it in your application on your own.
 
 [How to do it](https://github.com/seuros/capistrano-sidekiq#usage)
 
-## capistrano3-puma
+### capistrano3-puma
 
 We are including `capistrano3-puma` but you need to require it in your application on your own.
 
