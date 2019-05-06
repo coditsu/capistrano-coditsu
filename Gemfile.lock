@@ -122,7 +122,7 @@ GEM
     rack-protection (2.0.5)
       rack
     rake (12.3.2)
-    redis (4.1.0)
+    redis (4.1.1)
     require_all (2.0.0)
     ruby-kafka (0.7.6)
       digest-crc
