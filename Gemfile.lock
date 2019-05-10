@@ -124,7 +124,7 @@ GEM
     rake (12.3.2)
     redis (4.1.1)
     require_all (2.0.0)
-    ruby-kafka (0.7.6)
+    ruby-kafka (0.7.7)
       digest-crc
     sidekiq (5.2.7)
       connection_pool (~> 2.2, >= 2.2.2)
