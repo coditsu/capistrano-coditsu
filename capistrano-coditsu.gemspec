@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'capistrano-rails'
   spec.add_dependency 'capistrano-rbenv'
   spec.add_dependency 'capistrano-sidekiq'
-  spec.add_dependency 'capistrano3-puma', '>= 3.1.1'
+  spec.add_dependency 'capistrano3-puma'
   spec.add_dependency 'ed25519'
   spec.add_dependency 'envlogic'
   spec.add_dependency 'net-ssh'
