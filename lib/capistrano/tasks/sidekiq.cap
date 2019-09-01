@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # We have to re-define capistrano-sidekiq's tasks to work with
 # systemctl in production. Note that you must clear the previously-defined
 # tasks before re-defining them.
