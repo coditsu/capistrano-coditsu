@@ -1,19 +1,21 @@
 # frozen_string_literal: true
 
-after 'deploy:starting', 'sidekiq:stop'
-after 'deploy:published', 'sidekiq:start'
-after 'deploy:failed', 'sidekiq:restart'
-
 namespace :sidekiq do
-  task :stop do
-    on roles(:app) do
-      execute :sudo, :systemctl, :stop, "#{fetch(:application)}-sidekiq"
-    end
+  task :add_default_hooks do
+    after 'deploy:starting', 'sidekiq:stop'
+    after 'deploy:published', 'sidekiq:start'
+    after 'deploy:failed', 'sidekiq:restart'
   end
 
   task :start do
     on roles(:app) do
       execute :sudo, :systemctl, :start, "#{fetch(:application)}-sidekiq"
+    end
+  end
+
+  task :stop do
+    on roles(:app) do
+      execute :sudo, :systemctl, :stop, "#{fetch(:application)}-sidekiq"
     end
   end
 

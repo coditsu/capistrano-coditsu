@@ -1,19 +1,21 @@
 # frozen_string_literal: true
 
-after 'deploy:starting', 'puma:stop'
-after 'deploy:published', 'puma:start'
-after 'deploy:failed', 'puma:restart'
-
 namespace :puma do
-  task :stop do
-    on roles(:web) do
-      execute :sudo, :systemctl, :stop, "#{fetch(:application)}-puma"
-    end
+  task :add_default_hooks do
+    after 'deploy:starting', 'puma:stop'
+    after 'deploy:published', 'puma:start'
+    after 'deploy:failed', 'puma:restart'
   end
 
   task :start do
     on roles(:web) do
       execute :sudo, :systemctl, :start, "#{fetch(:application)}-puma"
+    end
+  end
+
+  task :stop do
+    on roles(:web) do
+      execute :sudo, :systemctl, :stop, "#{fetch(:application)}-puma"
     end
   end
 
