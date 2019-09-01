@@ -9,7 +9,7 @@ module Capistrano
   # Karafka Capistrano integration
   class Coditsu < Capistrano::Plugin
     # Names of files that store capistrano procedures
-    CAP_FILES = %w[deploy sidekiq].freeze
+    CAP_FILES = %w[deploy puma sidekiq].freeze
 
     # Default values for Karafka settings
     def set_defaults
