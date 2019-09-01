@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
-# We have to re-define capistrano-sidekiq's tasks to work with
-# systemctl in production. Note that you must clear the previously-defined
-# tasks before re-defining them.
-Rake::Task['sidekiq:stop'].clear_actions
-Rake::Task['sidekiq:start'].clear_actions
-Rake::Task['sidekiq:restart'].clear_actions
+after 'deploy:starting', 'sidekiq:stop'
+after 'deploy:published', 'sidekiq:start'
+after 'deploy:failed', 'sidekiq:restart'
 
 namespace :sidekiq do
   task :stop do
