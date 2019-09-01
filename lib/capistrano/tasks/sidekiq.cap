@@ -25,4 +25,10 @@ namespace :sidekiq do
       execute :sudo, :systemctl, :restart, "#{fetch(:application)}-sidekiq"
     end
   end
+
+  task :status do
+    on roles(:app) do
+      execute :sudo, :systemctl, :status, "#{fetch(:application)}-sidekiq"
+    end
+  end
 end
