@@ -2,7 +2,7 @@
 
 namespace :puma do
   task :add_default_hooks do
-    after 'deploy:starting', 'puma:stop'
+    after 'deploy:published', 'puma:stop'
     after 'deploy:published', 'puma:start'
     after 'deploy:failed', 'puma:restart'
   end
