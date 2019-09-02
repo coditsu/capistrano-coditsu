@@ -1,0 +1,33 @@
+# frozen_string_literal: true
+
+namespace :karafka do
+  task :add_default_hooks do
+    after 'deploy:starting', 'karafka:stop'
+    after 'deploy:published', 'karafka:start'
+    after 'deploy:failed', 'karafka:restart'
+  end
+
+  task :start do
+    on roles(:app) do
+      execute :sudo, :systemctl, :start, "#{fetch(:application)}-karafka"
+    end
+  end
+
+  task :stop do
+    on roles(:app) do
+      execute :sudo, :systemctl, :stop, "#{fetch(:application)}-karafka"
+    end
+  end
+
+  task :restart do
+    on roles(:app) do
+      execute :sudo, :systemctl, :restart, "#{fetch(:application)}-karafka"
+    end
+  end
+
+  task :status do
+    on roles(:app) do
+      execute :sudo, :systemctl, :status, "#{fetch(:application)}-karafka"
+    end
+  end
+end

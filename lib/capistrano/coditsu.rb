@@ -9,13 +9,14 @@ module Capistrano
   # Karafka Capistrano integration
   class Coditsu < Capistrano::Plugin
     # Names of files that store capistrano procedures
-    CAP_FILES = %w[deploy puma sidekiq].freeze
+    CAP_FILES = %w[deploy puma sidekiq karafka].freeze
 
     # Default values for Karafka settings
     def set_defaults
       set :bundle_clean_options, '--force'
       set :puma_default_hooks, false
       set :sidekiq_default_hooks, false
+      set :karafka_default_hooks, false
     end
   end
 end
@@ -28,6 +29,7 @@ end
 before 'deploy:starting', :check_hooks do
   invoke 'puma:add_default_hooks' if fetch(:puma_default_hooks)
   invoke 'sidekiq:add_default_hooks' if fetch(:sidekiq_default_hooks)
+  invoke 'karafka:add_default_hooks' if fetch(:karafka_default_hooks)
 end
 
 # rubocop:enable Security/Eval
