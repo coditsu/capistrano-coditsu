@@ -17,7 +17,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'bcrypt_pbkdf'
   spec.add_dependency 'capistrano', '>= 3.9'
   spec.add_dependency 'capistrano-bundler'
-  spec.add_dependency 'capistrano-karafka', '>= 1.3.0.rc1'
   spec.add_dependency 'capistrano-rails'
   spec.add_dependency 'capistrano-rbenv'
   spec.add_dependency 'ed25519'
