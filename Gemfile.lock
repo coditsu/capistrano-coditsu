@@ -12,7 +12,7 @@ PATH
       net-ssh
 
 GEM
-  remote: https://rubygems.org/
+  remote: https://my.diffend.io/protect/gems/
   specs:
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
