@@ -46,11 +46,10 @@ GEM
       net-ssh (>= 2.8.0)
 
 PLATFORMS
-  ruby
   x86_64-linux
 
 DEPENDENCIES
   capistrano-coditsu!
 
 BUNDLED WITH
-   2.2.0
+   2.2.1
