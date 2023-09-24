@@ -14,7 +14,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    airbrussh (1.4.2)
+    airbrussh (1.5.0)
       sshkit (>= 1.6.1, != 1.7.0)
     bcrypt_pbkdf (1.1.0)
     capistrano (3.17.3)
