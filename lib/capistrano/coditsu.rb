@@ -23,7 +23,7 @@ end
 
 # rubocop:disable Security/Eval
 Capistrano::Coditsu::CAP_FILES.each do |cap_file|
-  eval File.open(File.expand_path("../tasks/#{cap_file}.cap", __FILE__), 'r').read
+  eval File.read(File.expand_path("../tasks/#{cap_file}.cap", __FILE__))
 end
 
 before 'deploy:starting', :check_hooks do
