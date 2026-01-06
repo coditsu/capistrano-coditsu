@@ -31,5 +31,4 @@ before 'deploy:starting', :check_hooks do
   invoke 'sidekiq:add_default_hooks' if fetch(:sidekiq_default_hooks)
   invoke 'karafka:add_default_hooks' if fetch(:karafka_default_hooks)
 end
-
 # rubocop:enable Security/Eval
