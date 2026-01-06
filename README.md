@@ -1,6 +1,6 @@
 # Capistrano Coditsu
 
-[![CircleCI](https://circleci.com/gh/coditsu/capistrano-coditsu/tree/master.svg?style=svg)](https://circleci.com/gh/coditsu/capistrano-coditsu/tree/master)
+[![CI](https://github.com/coditsu/capistrano-coditsu/actions/workflows/ci.yml/badge.svg)](https://github.com/coditsu/capistrano-coditsu/actions/workflows/ci.yml)
 
 Coditsu integration for Capistrano.
 
